@@ -13,7 +13,7 @@ return {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
-        require("none-ls.diagnostics.eslint_d"),
+        -- require("none-ls.diagnostics.eslint_d"), --Haksell says it's useless, idk, fixes my issues so idc
         -- null_ls.builtins.diagnostics.eslint_d, -- deprecated? idfk
       },
     })

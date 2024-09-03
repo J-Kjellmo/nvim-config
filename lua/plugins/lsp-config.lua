@@ -26,7 +26,8 @@ return {
         capabilities = capabilities
       })
       lspconfig.volar.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
       })
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
