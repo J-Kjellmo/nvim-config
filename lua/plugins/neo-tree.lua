@@ -8,6 +8,10 @@ return  {
   },
   config = function()
     vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle left<CR>')
+    vim.cmd([[
+        highlight NeoTreeNormal guibg=NONE ctermbg=NONE
+        highlight NeoTreeNormalNC guibg=NONE ctermbg=NONE
+    ]])
   end
 }
 
