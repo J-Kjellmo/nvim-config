@@ -1,11 +1,14 @@
 return  {
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
-    dependencies =  { 'nvim-lua/plenary.nvim' },
+    dependencies =  {
+      'nvim-lua/plenary.nvim',
+      "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0",
+    },
     config = function()
       local builtin = require("telescope.builtin")
       vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+      vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
       vim.cmd([[
           highlight TelescopeNormal guibg=NONE ctermbg=NONE
           highlight TelescopeBorder guibg=NONE ctermbg=NONE
