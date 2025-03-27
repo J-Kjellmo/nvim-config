@@ -19,6 +19,7 @@ vim.g.maplocalleader = "\\"
 
 require("vim-settings")
 require("lazy").setup("plugins")
+require("configs.api")
 
 vim.opt.termguicolors = true
 vim.cmd("highlight Normal guibg=NONE")

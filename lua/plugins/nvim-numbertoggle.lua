@@ -6,12 +6,12 @@ return {
     function ToggleNumberToggle()
       numbertoggle_enabled = not numbertoggle_enabled
       if numbertoggle_enabled then
-        vim.cmd("doautocmd User NumberToggle")  -- Trigger plugin behavior
+        vim.cmd("doautocmd User NumberToggle")
         print("nvim-numbertoggle: Enabled")
       else
         vim.opt.number = true
         vim.opt.relativenumber = false
-        vim.cmd("autocmd! * <buffer>") -- Clear buffer-specific autocmds
+        vim.cmd("autocmd! * <buffer>")
         print("nvim-numbertoggle: Disabled")
       end
     end
