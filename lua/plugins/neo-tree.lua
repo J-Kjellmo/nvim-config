@@ -31,7 +31,14 @@ return  {
             renderer.focus_node(state, siblings[1]:get_id())
           end
         }
-      }
+      },
+      filesystem = {
+        filtered_items = {
+          visible = true, 
+          hide_dotfiles = false,
+          hide_gitignored = true,
+        },
+      },
     })
   end
 }
